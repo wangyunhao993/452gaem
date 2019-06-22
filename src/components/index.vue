@@ -62,8 +62,8 @@
                 <!-- 分页器 -->
                 <div class="swiper-pagination"  slot="pagination"></div>
                 <!-- 导航按钮 上下页 -->
-                <div class="swiper-button-prev" slot="button-prev"></div>
-                <div class="swiper-button-next" slot="button-next"></div>
+                <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+                <div class="swiper-button-next" slot="button-next"></div> -->
                 <!-- 滚动条 -->
                 <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
             </swiper>
@@ -134,17 +134,15 @@ export default {
                 disableOnInteraction: false,
                 delay:3000
             },
+            speed:1000,
             // 开启无限循环
             loop:true,
              //设置点击箭头
            paginationClickable :true,
-           
-
             // nextEl: '.swiper-button-next',
             // prevEl: '.swiper-button-prev',
-
-                prevButton:'.swiper-button-prev',
-                nextButton:'.swiper-button-next',
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
 
             //设置同屏显示的数量，默认为1，使用auto是随意的意思。
             // slidesPerView:1,
