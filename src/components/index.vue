@@ -69,12 +69,16 @@
             </swiper>
             <div class="main w">
                 <div class="main-left">
-                    <div class="main-tle">
+                    <div class="main-left-top">
+                        <div class="main-tle">
                         <h2>新闻中心</h2>
                         <div class="xinwengengduo">更多</div>
                     </div>
                     <div class="m-l-center">
-
+                        <div class="m-l-tile"><h6>热血重击</h6></div>
+                        <div class="m-l-contenter"><img src="" alt=""></div>
+                        <div class="m-l-footer"></div>
+                    </div>
                     </div>
                 </div>
                 <div class="main-right">
@@ -100,7 +104,7 @@
 
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import { log } from 'util';
+// import { log } from 'util';
 
 export default {
   name: "index",
@@ -121,14 +125,36 @@ export default {
           // some swiper options/callbacks
           // 所有的参数同 swiper 官方 api 参数
           // ...
-          autoplay: 1000,
+            //显示分页
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true
+            },
+           autoplay: {
+                disableOnInteraction: false,
+                delay:3000
+            },
+            // 开启无限循环
+            loop:true,
+             //设置点击箭头
+           paginationClickable :true,
+           
+
+            // nextEl: '.swiper-button-next',
+            // prevEl: '.swiper-button-prev',
+
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+
+            //设置同屏显示的数量，默认为1，使用auto是随意的意思。
+            // slidesPerView:1,
         },
         
       }
   },
   methods:{
       callback(){
-          console.log('hahh')
+          
       }
   },
    computed: {
@@ -138,27 +164,10 @@ export default {
     },
     mounted() {
 
-    //     new Swiper (this.$refs.slider, {
-    //     loop: true,
-    //     // 如果需要分页器
-    //     pagination: '.swiper-pagination',
-    //     // 如果需要前进后退按钮
-    //     nextButton: '.swiper-button-next',
-    //     prevButton: '.swiper-button-prev',
-    //     // 如果需要滚动条
-    //     scrollbar: '.swiper-scrollbar',
-    //   })
-
-      // current swiper instance
-      // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-    //   console.log('swiper对象', this.swiper)
-    //   this.swiper.slideTo(3, 1000, true)
-    //   this.swiper.autoplay.run(1000)
-    //   this.swiper.autoplay.pause(1000)
-
-        // var mySwiper = new Swiper('.swiper-container', {
-        // autoplay: 5000,//可选选项，自动滑动
-    // })
+    },
+    components: {
+        swiper,
+        swiperSlide
     }
 }
 </script>
@@ -288,14 +297,16 @@ export default {
                 }
             }
         }
-
+        // 主体
         #main {
 
             .main{
+                background: url(/../../assets/images/index/beij.png) no-repeat;
                 width: 1439px;
                 height: 1352px;
                 background-color: yellowgreen;
                 padding: 10px 20px;
+                box-sizing: border-box;
                 // background-image: url("../assets/images/index/beij.png");
                 // background: url();
 
@@ -309,34 +320,41 @@ export default {
                     background-color: rgb(63, 52, 52);
                     float: left;
 
-                    .main-tle{
-                        height: 45px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
+                    .main-left-top{
+                    // display: flex;
+                    
 
-                        h2{
-                            font-size: 23px;
-                            font-weight:400;
-                            margin-left: 17px;
-                            box-sizing: border-box;
-                            line-height: 45px;
-                        }
+                    // .main-tle{
+                    //     height: 24px;
+                    //     display: flex;
+                    //     justify-content: space-between;
+                    //     align-items: center;
 
-                        .xinwengengduo{
-                            widows: 34px;
-                            height: 14px;
-                            font-size: 12px;
-                            line-height: 14px;
-                            border: 1px solid #187BEB;
-                            border-radius: 4px;
-                            text-align: center;
-                            color: #187BEB;
+                    //     h2{
+                    //         font-size: 24px;
+                    //         font-weight:400;
+                    //         margin-left: 17px;
+                    //         box-sizing: border-box;
+                    //         line-height: 24px;
+                    //     }
+
+                    //     .xinwengengduo{
+                    //         widows: 34px;
+                    //         height: 14px;
+                    //         font-size: 12px;
+                    //         line-height: 14px;
+                    //         border: 1px solid #187BEB;
+                    //         border-radius: 4px;
+                    //         text-align: center;
+                    //         color: #187BEB;
                             
                             
-                        }
+                    //     }
                         
-                    }
+                    // }
+                }
+                
+
                 }
                 .main-right{
                      height: 100%;
@@ -360,17 +378,18 @@ export default {
 
         // 公共标题
         .main-tle{
-             height: 45px;
+             height: 24px;
              display: flex;
              justify-content: space-between;
              align-items: center;
+             margin-top: 12px;
 
              h2{
-                 font-size: 23px;
+                 font-size: 24px;
                  font-weight:400;
                  margin-left: 17px;
                  box-sizing: border-box;
-                 line-height: 45px;
+                 line-height: 24px;
              }
 
              .xinwengengduo{
@@ -382,7 +401,6 @@ export default {
                  border-radius: 4px;
                  text-align: center;
                  color: #187BEB;
-                 
                  
              }
              
