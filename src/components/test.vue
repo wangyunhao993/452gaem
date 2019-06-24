@@ -110,7 +110,6 @@
                                 <img src="../assets/images/index/saomaguanzhu.png" alt="" class="wenzisaoma">
                                 <img src="../assets/images/index/shayubuhui.png" alt="" class="shayubuhuifei">
                                 <img src="../assets/images/index/genduo.png" alt="" class="gengduozixun">
-                                <img src="../assets/images/index/shayu1.png" alt="" class="shayu">
                             </div>
                         </div>
                     </div>
@@ -154,52 +153,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- 右边 -->
+
                 <div class="main-right">
-                    <div class="main-right-body">
-                        <div class="main-tle">
-                            <h2>下载游戏</h2>
-                            <div class="xinwengengduo">更多</div>
-                        </div>
-                        <div class="main-right-body-contener">
-                            <ul>
-                                <li>
-                                    <div class="main-right-body-contener-img">
-                                        <!-- <img src="../assets/images/index/youxituijian-1.png" alt=""> -->
-                                    </div>
-                                    <div class="main-right-explain">
-                                         <p>热血合击</p>
-                                        <div class="explain-jinruyouxi">
-                                            进入游戏
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="main-right-body-contener-img">
-                                        <!-- <img src="../assets/images/index/youxituijian-1.png" alt=""> -->
-                                    </div>
-                                    <div class="main-right-explain">
-                                         <p>热血合击</p>
-                                        <div class="explain-jinruyouxi">
-                                            进入游戏
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="main-right-body-contener-img">
-                                        <!-- <img src="../assets/images/index/youxituijian-1.png" alt=""> -->
-                                    </div>
-                                    <div class="main-right-explain">
-                                         <p>热血合击</p>
-                                        <div class="explain-jinruyouxi">
-                                            进入游戏
-                                        </div>
-                                    </div>
-                                </li>
-                               
-                            </ul>
-                        </div>
+                    <div class="main-tle">
+                        <h2>下载游戏</h2>
+                        <div class="xinwengengduo">更多</div>
                     </div>
+                   
+
                 </div>
 
             </div>
@@ -322,6 +283,18 @@ export default {
                            }
                        }
 
+                        /* 伪元素线 */
+                        // &.right::before {
+                        //     content: '';
+                        //     position: absolute;
+                        //     display: block;
+                        //     height: 300px;
+                        //     width: 1px;
+                        //     left: 0;
+                        //     background-color: #ccc;
+                        //     top: 50%;
+                        //     transform: translate(0, -50%);
+                        // }
                    }
                }
 
@@ -428,7 +401,7 @@ export default {
                     height: 100%;
                     width: 344px;
                     float: left;
-                    // background-color: rgb(60, 10, 241);
+
                     .main-left-top{
                     
                     .m-l-center{
@@ -511,6 +484,7 @@ export default {
                         height: 521px;
                         margin: 0 auto;
                         margin-top: 19px;
+                        position: relative;
 
                         .main-left-conten-body-img{
                             height: 404px;
@@ -525,7 +499,7 @@ export default {
                                 top: 17px;
                                 left: 50%;
                                 // top: 50%;
-                                transform: translate(-50%,);
+                                transform: translate(-50%, -50%);
                             }
 
                             .wenzisaoma{
@@ -533,26 +507,20 @@ export default {
                                 top: 278px;
                                 left: 50%;
                                 // top: 50%;
-                                transform: translate(-50%,);
+                                transform: translate(-50%, -50%);
                             }
                             .shayubuhuifei{
                                 
                                 top: 304px;
                                 left: 50%;
                                 // top: 50%;
-                                transform: translate(-50%,);
+                                transform: translate(-50%, -50%);
                             }
                             .gengduozixun{
                                 top: 352px;
                                 left: 50%;
                                 // top: 50%;
-                                transform: translate(-50%,);
-                            }
-                            .shayu{
-                                top: 103px;
-                                left: 50%;
-                                // top: 50%;
-                                transform: translate(-50%,);
+                                transform: translate(-50%, -50%);
                             }
 
                         }
@@ -617,33 +585,17 @@ export default {
                                     border-bottom: 1px solid #ccc;
                                     border-right: 1px solid #ccc;
                                     box-sizing: border-box;
-
-                                    &:hover{
-                                        background: url(../assets/images/index/kuaisutongdao-2293.png)
-                                    }
                                 }
                                 &:nth-child(4){
                                     border-bottom: 1px solid #ccc;
                                     box-sizing: border-box;
-
-                                    &:hover{
-                                        background: url(../assets/images/index/kuaisutongdao-2293.png)
-                                    }
                                 }
                                 &:nth-child(5){
                                     border-right: 1px solid #ccc;
                                     box-sizing: border-box;
-
-                                    &:hover{
-                                        background: url(../assets/images/index/kuaisutongdao-2293.png)
-                                    }
                                 }
                                 &:nth-child(6){
                                     color: #CD7A53;
-
-                                    &:hover{
-                                        background: url(../assets/images/index/kuaisutongdao-2293.png)
-                                    }
                                 }
                             }
                         }
@@ -654,108 +606,9 @@ export default {
                 }
                 .main-right{
                      height: 100%;
-                     width: 1018px;
-                    //  background-color: rgb(223, 88, 88);
+                     width: 1002px;
+                     background-color: rgb(223, 88, 88);
                      float: right;
-
-                     .main-right-body{
-
-                         .main-right-body-contener{
-                             margin-top: 18px;
-                             ul{
-
-                                 li{
-                                     float: left;
-                                    //  width: 320px;
-                                    //  height: 219px;
-                                    width: 318px;
-                                    height: 216px;
-                                    margin-right: 28px;
-                                    
-                                    box-sizing: border-box;
-                                    border-right: 1px solid #ccc;
-                                    border-bottom: 1px solid #ccc;
-                                    border-left: 1px solid #ccc;
-                                    border-bottom-right-radius: 20px;
-                                    border-bottom-left-radius: 20px;
-                                    border-top-right-radius: 20px;
-                                    border-top-left-radius: 20px;
-
-                                     .main-right-body-contener-img{
-                                         width: 100%;
-                                         height: 180px;
-                                         background: url(../assets/images/index/youxituijian-1.png)
-                                     }
-                                     &:nth-child(3){
-                                         margin-right: 0px;
-                                     }
-
-                                     .main-right-explain{
-                                         height: 36px;
-                                        
-                                        //  border-right: 1px solid #ccc;
-                                        //  border-bottom: 1px solid #ccc;
-                                        //  border-left: 1px solid #ccc;
-                                         position: relative;
-                                         box-sizing: border-box;
-
-                                         p{
-                                             position: absolute;
-                                             left: 16px;
-                                             top: 8px;
-                                             font-size: 17px;
-                                             line-height: 17px;
-                                             color: #202324;
-                                            //  font-weight: 400px;
-                                         }
-
-                                        .explain-jinruyouxi{
-                                            position: absolute;
-                                            top: 6px;
-                                            right: 18px;
-                                            width: 73px;
-                                            height: 23px;
-                                            font-size: 12px;
-                                            line-height: 23px;
-                                            background-color: #FB7D00;
-                                            text-align: center;
-                                            border-radius:20px;
-                                            color: #FBFCFC;
-                                        }
-                                     }
-
-                                     &:hover{
-                                        //  background: url(../assets/images/index/yxtj-beijing.png);
-                                        transform: scale(1.05) ;
-                                        border: 1px solid #FB7D00;
-                                        box-sizing: border-box;
-                                        border-top-right-radius: 18px;
-                                        border-top-left-radius: 18px;
-                                            //  background-size: 110%;
-                                        //  width: 320px;
-                                        //  height: 218px;
-                                        // "transform","scaleX(1.1) scaleY(1.1)"
-                                         
-                                     }
-                                     &:hover .main-right-body-contener-img{
-                                         background: url(../assets/images/index/yxtj-beijing.png) no-repeat;
-                                        //  background: url('')
-                                        // content: url('');
-                                        // content: url(../assets/images/index/yxtj-beijing.png)
-
-                                     }
-
-                                     &:hover .main-right-explain{
-                                        //  border-right: 1px solid #FB7D00;
-                                        //  border-bottom: 1px solid #FB7D00;
-                                        //  border-left: 1px solid #FB7D00;
-                                        // border: 0;
-                                     }
-                                     
-                                 }
-                             }
-                         }
-                     }
                 }
             }
         }
@@ -778,7 +631,6 @@ export default {
              justify-content: space-between;
              align-items: center;
              margin-top: 12px;
-             position: relative;
 
              h2{
                  font-size: 24px;
@@ -799,19 +651,7 @@ export default {
                  color: #187BEB;
                  
              }
-            
-            &::before{
-                content: '';
-                position: absolute;
-                display: block;
-                height: 32px;
-                width: 5px;
-                left: 0;
-                background-color: @indexColor;
-                // top: 50%;
-                // transform: translate(0, -50%);
-            }
-           
+             
         }
     }
 </style>

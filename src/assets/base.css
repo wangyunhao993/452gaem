@@ -27,6 +27,7 @@ footer {
   list-style: none;
   /* 默认鼠标 */
   cursor: default;
+  font-weight: 400px;
 }
 /*可选*/
 html,
