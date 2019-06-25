@@ -31,7 +31,7 @@
                 <ul class="nav-ul" >
                     <!-- <li v-for="(item,index) in navList">{{item}}</li> -->
                     <li class="atc" >首页</li>
-                    <li>咨询</li>
+                    <li>资讯</li>
                     <li class="atc">游戏中心</li>
                     <li>礼包中心</li>
                     <li>商城</li>
@@ -185,7 +185,7 @@ export default {
       return {
           navList:[
               '首页',
-              '咨询',
+              '资讯',
               '游戏中心',
               '礼包中心',
               '商城',
