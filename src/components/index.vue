@@ -29,8 +29,8 @@
                     <router-link to="/"> <img src="../assets/images/index/gonshim.png" alt="452游戏"> </router-link>
                 </h1>
                 <ul class="nav-ul" >
-                    <li v-for="(item,index) in navList">{{item}}</li>
-                    <!-- <li class="atc">首页</li>
+                    <!-- <li v-for="(item,index) in navList">{{item}}</li> -->
+                    <li class="atc">首页</li>
                     <li>咨询</li>
                     <li >游戏中心</li>
                     <li>礼包中心</li>
@@ -38,7 +38,7 @@
                     <li>VIP</li>
                     <li >452游戏盒子</li>
                     <li>客服</li>
-                    <li>个人中心</li> -->
+                    <li>个人中心</li>
                 </ul>
                 <div class="nav-right">
                     <div class="nav-le">
@@ -53,7 +53,8 @@
         <!-- 主体 -->
         <!-- 也是link to 的地方 -->
         <main id="main">
-            <swiper class="container" :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
+            <div class="lunbotu">
+                <swiper class="container" :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
                 <!-- slides -->
                 <swiper-slide v-for="(ietm,index) in imgList" ><img @click="imgClick(ietm)" height="550px" src="../assets/images/index/banner.png" alt=""></swiper-slide>
                 <!-- <swiper-slide><img height="550px" src="../assets/images/index/banner.png" alt=""></swiper-slide>
@@ -68,6 +69,8 @@
                 <!-- 滚动条 -->
                 <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
             </swiper>
+            </div>
+            
             
             <div class="main w">
                 <!-- 个人中心弹框 -->
@@ -75,7 +78,7 @@
                     <div class="gerentankuang-top">
                         <img src="../assets/images/index/touxiang.png" alt="">
                         <div class="top-explain">
-                            <div>欢迎来到452游戏!</div>
+                            <div class="wenzi">欢迎来到452游戏!</div>
                             <div class="login">
                                 <span class="denglu">登录</span>
                                 <span class="zhuce">注册</span>
@@ -84,11 +87,12 @@
                     </div>
                     <div class="gerentankuang-buttom">
                         <div class="buttom-tel">
-
+                            推荐游戏
                         </div>
                         <ul>
                             <li>
-
+                                <img src="" alt="">
+                                <p>热血传奇</p>
                             </li>
                         </ul>
                     </div>
@@ -704,7 +708,10 @@ export default {
             position: relative;
             height: 1839px;
             // 轮播图样式
-            .container{
+            .lunbotu{
+                width: 1920px;
+                margin: 0 auto;
+                .container{
                 height: 550px;
                 width: 1920px;
                 // margin: 0 auto;
@@ -719,17 +726,18 @@ export default {
                    bottom: 140px;
                }
             }
-
-           
-
+            }
             
             .main{
-                     // 弹框样式
+                     // 个人弹框样式
                 .main-gerentankuang{
+                    border-radius:0px 0px 20px 20px;
+                    background:#193864;
+                    opacity:0.71;
                     position: absolute;
                     width: 369px;
                     height: 317px;
-                    background-color: rgba(197, 17, 173,0.5);
+                    // background-color: rgba(197, 17, 173,0.5);
                     top: -487px;
                     left: 0;
                     z-index: 66;
@@ -745,11 +753,40 @@ export default {
                         }
 
                         .top-explain{
-                            height: 100px;
+                            height: 70px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            
+                            .wenzi{
+                                color: #fff;
+                            }
+
+                            .login{
+                                display: flex;
+                                justify-content: space-between;
+                                span{
+                                    text-align: center;
+                                    display: block;
+                                    width: 52px;
+                                    height: 20px;
+                                    border-radius: 10px;
+                                    // color: #fff;
+                                    &:nth-child(1){
+                                        color: #fff;
+                                        background-color: @indexColor;
+                                    }
+                                    &:nth-child(2){
+                                        color: #fff;
+                                        background-color: rgb(243, 116, 2);
+                                    }
+                                }
+                            }
                         }
                     }
                     .gerentankuang-buttom{
                         height: 50%;
+                        background-color: rgb(194, 10, 10);
                     }
                 }
                 position: absolute;
